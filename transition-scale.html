@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.beforeafter-1.4.js"></script>
+  <style>
+    body {
+      text-align: center;
+    }
+    .img {
+      border: 1px solid hsl(0, 0%, 75%);
+      margin: 48px auto 12px;
+      width: 150px;
+    }
+    .img img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: all .3s ease;
+    }
+    .img img:hover {
+      transform: scale(2);
+    }
+    .rendering {
+      image-rendering: pixelated;
+    }
+    .backface {
+      backface-visibility: hidden;
+    }
+    .will-change {
+      will-change: transform;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="scale">
+    <div class="img">
+      <img src="01.jpg" alt="">
+    </div>
+    <p>Normal</p>
+    <div class="img">
+      <img class="rendering" src="01.jpg" alt="">
+    </div>
+    <p>Pixelated</p>
+    <div class="img">
+      <img class="backface" src="01.jpg" alt="">
+    </div>
+    <p>Backface</p>
+    <div class="img">
+      <img class="will-change" src="01.jpg" alt="">
+    </div>
+    <p>Will-change</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixel</title>
+
+  <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.beforeafter-1.4.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    *[class^="container"] {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>正常尺寸
+        <img src="03.gif" />
+    </h1>
+
+    <div class="container">
+      <div><img src="03.gif" width="60" style="image-rendering: auto" /></div>
+      <div><img src="03.gif" width="60" style="image-rendering: pixelated;" /></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1>放大(1920px)</h1>
+    <div class="container2">
+      <div><img src="03.gif" width="120" style="image-rendering: auto" /></div>
+      <div><img src="03.gif" width="120" style="image-rendering: pixelated;" /></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1>縮小(45px)</h1>
+    <div class="container3">
+      <div><img src="03.gif" width="45" style="image-rendering: auto" /></div>
+      <div><img src="03.gif" width="45" style="image-rendering: pixelated;" /></div>
+    </div>
+  </div>
+  
+
+  <script type="text/javascript">
+    $(function(){
+      $('.container').beforeAfter();
+      $('.container1').beforeAfter();
+      $('.container2').beforeAfter();
+      $('.container3').beforeAfter();
+    });
+  </script>
+</body>
+</html>
